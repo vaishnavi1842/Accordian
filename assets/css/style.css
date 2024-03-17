@@ -1,0 +1,44 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+.accHeading{
+	background-color:black;
+	color:white;
+	padding:10px;
+	text-transform:capitalize;
+	cursor:pointer;
+	margin:0;
+	position:relative;
+}
+
+.accContent{
+	display:none;
+	padding:10px;
+	border:2px solid black;
+}
+
+.accHeading.active + .accContent{
+	display:block;
+}
+
+.accHeading.active,
+.accHeading:focus,
+.accHeading:hover,
+.accHeading:active{
+	background-color: orange;
+}
+
+h2.accHeading::after{
+	content:'+';
+	position:absolute;
+	right:15px;
+	top:5px;
+}
+
+h2.accHeading.active::after{
+	content:'-';
+	
+}
